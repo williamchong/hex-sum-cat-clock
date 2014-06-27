@@ -17,7 +17,7 @@ function update() {
     s = checkTime(s);
     document.getElementById('mainClock').innerHTML = h+":"+m+":"+s;
 	 document.body.style.background="rgb("+r+","+g+","+b+")";
-    var t = setTimeout(function(){update()},100);
+    var t = setTimeout(function(){update()},250);
 }
 
 function checkTime(i) {
