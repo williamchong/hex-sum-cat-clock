@@ -22,4 +22,7 @@ function checkTime(i) {
 
 window.addEventListener('load', function() {
   setTimeout(update(), Date.now() % 1000);
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js');
+  }
 });
