@@ -11,9 +11,14 @@ html, body {
   position: absolute;;
   background-position: center center;
   background-blend-mode: multiply;
-  background-image: url('../image/cat.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+.no-webp #background {
+  background-image: url('../image/cat.png');
+}
+.webp #background{
+  background-image: url('../image/cat.webp');
 }
 
 #mainClock {
