@@ -13,6 +13,9 @@ html, body {
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
 }
 .no-webp #background {
   background-image: url('../image/cat.png');
@@ -29,7 +32,7 @@ html, body {
   padding-top: 20%;
   color: #ffffff;
   text-shadow: 2px 2px #aaaaaa;
-  font-size: 1000%;
+  font-size: 20vmin;
   opacity: 0.9;
   border-bottom: 1px solid #fff;
   font-family: 'Inconsolata', monospace;
