@@ -12,7 +12,7 @@ function update() {
   s = checkTime(s);
   clockEl.innerHTML = h + ":" + m + ":" + s;
 	backgroundEl.style['background-color']="rgb(" + r + "," + g + "," + b + ")";
-  var t = setTimeout(function(){update()}, 1000);
+  var t = setTimeout(function(){update()}, 1000 - Date.now() % 1000);
 }
 
 function checkTime(i) {
@@ -21,7 +21,7 @@ function checkTime(i) {
 }
 
 window.addEventListener('load', function() {
-  setTimeout(update(), Date.now() % 1000);
+  setTimeout(function(){update()}, 1000 - Date.now() % 1000);
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../sw.js');
   }
